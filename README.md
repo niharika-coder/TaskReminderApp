@@ -55,6 +55,26 @@ The application exposes RESTful APIs using Spring Boot controllers to manage tas
 
 
 ---
+Milestones
+
+Week 1–2:
+- Project setup
+- Spring Boot configuration
+- Task entity and repository
+
+Week 3–4:
+- Task CRUD APIs
+- Database integration via JDBC/JPA
+
+Week 5–6:
+- Scheduling using ScheduledExecutorService
+- CSV export and Email reminder integration
+
+Week 7–8:
+- Task completion tracking
+- Status APIs
+- End-to-end testing
+
 
 ## How to Run
 1. Clone the repository:
