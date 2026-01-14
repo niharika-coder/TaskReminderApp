@@ -24,17 +24,35 @@ The application exposes **RESTful APIs** for all operations.
 
 ---
 
-## API Endpoints
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/tasks/add` | POST | Add a new task |
-| `/tasks/list` | GET | List all tasks |
-| `/tasks/{id}` | PUT | Update task details |
-| `/schedule/set` | POST | Set task reminder |
-| `/reminders/{taskId}` | GET | Get reminder for a task |
-| `/reports/export` | POST | Export task report as CSV |
-| `/completion/mark` | PUT | Mark task as completed |
-| `/status/{taskId}` | GET | Check task status |
+## REST API Endpoints
+
+The application exposes RESTful APIs using Spring Boot controllers to manage tasks, scheduling, reports, and completion tracking.
+
+### Task Management APIs
+| Method | Endpoint        | Description                 |
+|------|-----------------|-----------------------------|
+| POST | /tasks/add      | Add a new task              |
+| GET  | /tasks/list     | Retrieve all tasks          |
+| PUT  | /tasks/{id}     | Update task details         |
+
+### Scheduling & Reminder APIs
+| Method | Endpoint                | Description                       |
+|------|-------------------------|-----------------------------------|
+| POST | /schedule/set           | Set reminder for a task           |
+| GET  | /reminders/{taskId}     | Get reminder details for a task   |
+
+### Report & CSV Export APIs
+| Method | Endpoint               | Description                         |
+|------|------------------------|-------------------------------------|
+| GET  | /reports/overview      | Get task summary overview           |
+| POST | /reports/export        | Export task report to CSV file      |
+
+### Completion Tracking APIs
+| Method | Endpoint               | Description                         |
+|------|------------------------|-------------------------------------|
+| PUT  | /completion/mark       | Mark task as completed              |
+| GET  | /completion/status/{taskId} | Get task completion status |
+
 
 ---
 
