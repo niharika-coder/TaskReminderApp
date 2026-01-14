@@ -18,6 +18,13 @@ public class EmailService {
         message.setTo(to);
         message.setSubject(subject);
         message.setText(body);
+
         mailSender.send(message);
+
+        if (to == null || to.isBlank()) {
+            System.out.println("Email not sent: recipient address is missing");
+            return;
+        }
+
     }
 }
